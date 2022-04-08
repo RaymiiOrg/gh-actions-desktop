@@ -217,13 +217,8 @@ jobs:
           fi
 
 
-      - name: Display connection information
-        run: |
-          echo 6h left"
-          # Wait... This process will be killed to end the Action. Return a
-          # non-failure exit code in any case so that there are no unnecessary
-          # notifications about a failed Actions workflow.
-          sleep 6h || true
+      - name: Sleep 6h
+        run: sleep 6h || true
 
 
       - name: Clean up
