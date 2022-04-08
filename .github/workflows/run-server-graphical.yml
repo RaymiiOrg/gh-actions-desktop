@@ -10,15 +10,15 @@
 # Created by Jacob Strieb
 # December 2020
 
-name: Run Graphical RDP CTF Environment (Ubuntu GNOME)
+name: Run Graphical RDP CTF Environment (Ubuntu KDE)
 
 # Only run when manually triggered
 on:
   workflow_dispatch:
     inputs:
       ngrok_token:
-        description: Token to use for ngrok (optional)
-        required: false
+        description: Token to use for ngrok (required)
+        required: true
 
 
 jobs:
