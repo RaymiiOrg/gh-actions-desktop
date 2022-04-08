@@ -79,19 +79,6 @@ jobs:
         run: |
           sudo systemctl enable --now sddm
 
-      - name: install ida
-        run: |
-          cd
-          mkdir --parents Downloads
-          cd Downloads
-          wget \
-            --quiet \
-            --output-document idafree70_linux.run \
-            "https://out7.hex-rays.com/files/idafree70_linux.run"
-          chmod +x idafree70_linux.run
-          ./idafree70_linux.run --mode unattended --installpassword poepjes 
-          echo 'alias ida="~/idafree-7.0/ida64"' >> ~/.bashrc
-
       - uses: actions/checkout@v2
       - name: Move checked out repository to ~/repo
         run: |
