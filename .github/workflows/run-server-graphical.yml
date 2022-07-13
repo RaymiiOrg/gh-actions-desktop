@@ -1,16 +1,9 @@
-# This GitHub Actions workflow installs several useful tools for CTFs, and
-# starts a server so the user can connect and work in the virtual environment.
-# This is a pretty safe environment for running random binaries from CTFs, and
-# you mostly don't have to worry about fucking anything up since it starts
-# fresh every time.
-#
-# The action also installs some graphical packages. It should be connected to
-# via Remote Desktop Protocol (RDP).
-#
 # Created by Jacob Strieb
 # December 2020
+# Updated by Remy van Elst
+# to not be specific for CTF.
 
-name: Run Graphical RDP CTF Environment (Ubuntu KDE)
+name: Run Graphical RDP Ubuntu KDE
 
 # Only run when manually triggered
 on:
